@@ -35,5 +35,11 @@ public class Teacher {
 
     public String getTel() { return tel; }
     public void setTel(String tel) { this.tel = tel; }
+
+    @Override
+    public String toString() {
+        return "Teacher{" + "teacherID=" + teacherID + ", name=" + name + ", dob=" + dob + ", tel=" + tel + '}';
+    }
+    
 }
 
