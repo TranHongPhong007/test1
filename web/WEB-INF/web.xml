@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <filter>
+        <filter-name>NewFilter</filter-name>
+        <filter-class>Filter.NewFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>NewFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>TeacherDAO</servlet-name>
+        <servlet-class>DAO.TeacherDAO</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PhoneFilter</servlet-name>
+        <servlet-class>Filter.PhoneFilter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TeacherController</servlet-name>
+        <servlet-class>controller.TeacherController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherDAO</servlet-name>
+        <url-pattern>/TeacherDAO</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhoneFilter</servlet-name>
+        <url-pattern>/PhoneFilter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TeacherController</servlet-name>
+        <url-pattern>/teachers</url-pattern>
+    </servlet-mapping>
+</web-app>
